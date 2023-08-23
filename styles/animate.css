@@ -1,0 +1,40 @@
+@keyframes opacity-reveal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.1;
+    }
+}
+@keyframes opacity-hide {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.opacity {
+    animation: opacity-hide 0.3s ease-out;
+    opacity: 0;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes bounce {
+    0% {
+        transform:translateY(-25%)
+    }
+    75% {
+        transform:translateY(5%)
+    }
+    100% {
+        transform:translateY(0%)
+    }
+}

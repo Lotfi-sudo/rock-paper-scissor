@@ -1,0 +1,203 @@
+/** options buttons */
+.game-options-container {
+    position: fixed;
+    bottom: 2%;
+    left: 50%;
+    width: 80%;
+    max-width: 700px;
+    transform: translateX(-50%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    
+    padding: 0 0 20px;
+    border-radius: 35px;
+}
+
+.option-btn-container {
+    position: relative;
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+}
+
+.option-btn > svg, .option-btn-shadow > svg {
+    width: 100%;
+}
+.option-btn {
+    animation: bounce 0.5s ease-in-out;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+    transition: 0.4s cubic-bezier(.13,.71,.45,.95);
+}
+.option-btn:hover {
+    transform: translateY(-15%);
+}
+.option-btn:active {
+    transform: scale(95%);
+}
+.option-btn-shadow {
+    animation: opacity-reveal 0.5s ease-in-out;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform: translateX(-50%) translateY(-20%);
+
+    opacity: 0.1;
+    mix-blend-mode: overlay;
+}
+
+/** Settings Buttons */
+.game-settings-container, .reload-wrapper {
+    position: fixed;
+    bottom: 1%;
+    left: 50%;
+    width: 80%;
+    max-width: 700px;
+    transform: translateX(-50%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5%;
+    
+    padding: 0 0 20px;
+    border-radius: 35px;
+}
+
+.button-container {
+    position: relative;
+}
+
+.btn {
+    background-color: white;
+    padding: 15px 30px 5px;
+    outline: 3px solid #403D38;
+    border-radius: 10px;
+    z-index: 3;
+    margin-bottom: 20px;
+
+    border-bottom: 10px solid #ECECEC;
+    transition: 0.3s cubic-bezier(.13,.71,.45,.95);
+}
+.btn:hover {
+    transform: translateY(-15%);
+}
+.btn > span {
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #403D38;
+}
+.shadow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -5;
+    width: 100%;
+    height: 100%;
+
+    transform: translateX(calc(-50% + 7px)) translateY(-30%);
+
+    background-color: black;
+    border-radius: 10px;
+    opacity: 0.1;
+    mix-blend-mode: overlay;
+}
+/* radio */
+.gamemode-settings-container {
+    position: relative;
+}
+
+.gamemode-settings-buttons {
+    position: relative;
+
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    outline: 3px solid #403D38;
+    border-radius: 10px;
+
+    transition: 0.3s cubic-bezier(.13,.71,.45,.95);
+}
+.gamemode-settings-buttons:hover {
+    transform: translateY(-15%);
+}
+
+.gamemode-settings-btn {
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    position: relative;
+}
+  
+.gamemode-settings-btn label,
+.gamemode-settings-btn input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.gamemode-settings-btn label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 90;
+}
+  
+.gamemode-settings-btn input[type="radio"] {
+    opacity: 0.01;
+    z-index: 100;
+}
+.gamemode-settings-btn input[type="radio"]:hover {
+    cursor: pointer;
+}
+  
+.gamemode-settings-btn input[type="radio"]:checked + label {
+    background: #403D38;
+    color: white;
+    border-bottom: 5px solid #272522;
+    border-radius: 4px;
+}
+
+@media (min-width: 475px) {
+    .game-settings-container {
+        flex-direction: row;
+        gap: 5%;
+    }
+    .btn {
+        margin-bottom: 0;
+     }
+}
+
+@media (min-width: 650px) {
+    .game-options-container {
+        bottom: 5%;
+    }
+    
+}
+  

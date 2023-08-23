@@ -1,0 +1,11 @@
+@import './style.css';
+@import './header.css';
+@import './game.css';
+@import './buttons.css';
+@import './animate.css';
+
+.display-none {
+    display: none;
+}
+
+

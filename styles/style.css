@@ -1,0 +1,33 @@
+
+
+
+* {
+    margin: 0;
+    line-height: calc(1em+ 0.5rem);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'TT Octosquares Trl', sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+}
+
+button {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+}
